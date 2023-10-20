@@ -1,6 +1,26 @@
 version: 2
 
 models:
+  - name: dim_hosts_cleansed
+    description: Cleansed table which contains Airbnb host details
+    columns:
+      - name: host_id
+        description: Host ID number
+        tests:
+          - not_null
+          - unique
+
+      - name: host_name
+        description: Name of host
+        tests:
+          - not_null
+
+      - name: is_superhost
+        description: Boolean value showing superhost status
+        tests:
+          - accepted_values:
+              values: ["t", "f"]
+
   - name: dim_listings_cleansed
     description: Cleansed table which contains Airbnb listings
     columns:

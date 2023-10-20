@@ -1,0 +1,16 @@
+version: 2
+
+exposures:
+  - name: Executive Dashboard
+    type: dashboard
+    maturity: low
+    url: https://a35dc0b7.us1a.app.preset.io/superset/dashboard/p/m0zx6y0bOqy/
+    description: Executive dashboard showing Airbnb listing information
+
+    depends_on:
+      - ref('dim_listings_w_hosts')
+      - ref('mart_fullmoon_reviews')
+
+    owner:
+      name: Andrew Keenan
+      email: keenanandrew@gmail.com

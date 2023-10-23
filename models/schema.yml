@@ -36,6 +36,8 @@ models:
               max_value: 5000
               config: 
                 severity: warn
+          - dbt_expectations.expect_column_values_to_be_of_type:
+              column_type: number
 
   - name: dim_listings_cleansed
     description: Cleansed table which contains Airbnb listings
